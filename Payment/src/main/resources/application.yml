@@ -33,10 +33,10 @@ spring:
       bindings:
         event-in:
           group: Payment
-          destination: winterschoolone
+          destination: petfriends
           contentType: application/json
         event-out:
-          destination: winterschoolone
+          destination: petfriends
           contentType: application/json
 
 logging:
