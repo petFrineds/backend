@@ -6,9 +6,9 @@ spring:
   profiles: default
   datasource:
     driver-class-name: org.mariadb.jdbc.Driver
-    url: jdbc:mariadb://localhost:3306/petfriends?characterEncoding=UTF-8&serverTimezone=UTC
+    url: jdbc:mariadb://petfriends.cyb2gh84g1ic.us-west-2.rds.amazonaws.com:3306/petfriends?characterEncoding=UTF-8&serverTimezone=UTC
     username: root
-    password: 1234
+    password: 12341234
     
   jpa:
     hibernate:
@@ -47,7 +47,7 @@ logging:
       SQL: DEBUG
     org.springframework.cloud: debug
 server:
-  port: 8082
+  port: 8080
 ---
 
 spring:
