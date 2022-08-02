@@ -1,23 +1,23 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: payment
+  name: walk
   namespace: tutorial
   labels:
-    app: payment
+    app: walk
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: payment
+      app: walk
   template:
     metadata:
       labels:
-        app: payment
+        app: walk
     spec:
       containers:
-        - name: payment
-          image: hispres.azurecr.io/payment:v1
+        - name: walk
+          image: hispres.azurecr.io/walk:v1
           ports:
             - containerPort: 8080
           env:

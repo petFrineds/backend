@@ -1,23 +1,23 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: payment
+  name: daily
   namespace: tutorial
   labels:
-    app: payment
+    app: daily
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: payment
+      app: daily
   template:
     metadata:
       labels:
-        app: payment
+        app: daily
     spec:
       containers:
-        - name: payment
-          image: hispres.azurecr.io/payment:v1
+        - name: daily
+          image: hispres.azurecr.io/daily:v1
           ports:
             - containerPort: 8080
           env:
