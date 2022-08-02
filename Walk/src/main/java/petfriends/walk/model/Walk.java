@@ -31,7 +31,7 @@ import petfriends.walk.dto.WalkStarted;
 public class Walk {
 
 	@Id
-    @GeneratedValue(strategy=GenerationType.AUTO)
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="walk_id")
     private Long id;			    			// 산책ID
 	

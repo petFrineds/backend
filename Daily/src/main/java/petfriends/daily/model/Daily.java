@@ -27,7 +27,7 @@ import petfriends.daily.dto.StarScoreGranted;
 public class Daily {
 
     @Id
-    @GeneratedValue(strategy=GenerationType.AUTO)
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     @Column(name="daily_id")
     private Long id;					// 일지ID
     
