@@ -8,7 +8,7 @@
 		<version>2.1.9.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>winterschoolone</groupId>
+	<groupId>petfriends</groupId>
 	<artifactId>Walk</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>Walk</name>
