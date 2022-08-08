@@ -2,7 +2,7 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: "backend-ingress"
+  name: "petfriend-ingress"
   namespace: default
   annotations:
     kubernetes.io/ingress.class: alb
@@ -12,6 +12,13 @@ spec:
   rules:
     - http:
         paths:
+          - path: /payments
+            pathType: Prefix
+            backend:  
+              service:
+                name: "payment-backend"
+                port:
+                  number: 8080
           - path: /
             pathType: Prefix
             backend:
@@ -19,17 +26,3 @@ spec:
                 name: "frontend"
                 port:
                   number: 80
-          - path: /payments
-            pathType: Prefix
-            backend:  
-              service:
-                name: "payment-backend"
-                port:
-                  number: 80
-          - path: /hello
-            pathType: Prefix
-            backend:  
-              service:
-                name: "hello-backend"
-                port:
-                  number: 80      
