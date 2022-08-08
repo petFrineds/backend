@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: payment-backend
+  namespace: default
 spec:
   replicas: 1
   selector:
@@ -15,9 +16,9 @@ spec:
       containers:
         - name: payment-backend
           image: 811288377093.dkr.ecr.us-west-2.amazonaws.com/payment-backend:latest
+          imagePullPolicy: Always
           ports:
             - containerPort: 8080
-          imagePullPolicy: Always
           env:
             - name: DATE
               value: 'DATE_STRING'
